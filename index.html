@@ -169,6 +169,24 @@ section.block + section.block { border-top: 1px solid var(--rule); }
 
 /* Publisher */
 .publisher { background: var(--paper); }
+/* Gallery: masonry columns keep each photo's own shape */
+.gallery { background: var(--paper); }
+.g-intro { color: var(--muted); margin: -12px 0 32px; max-width: 60ch; }
+.g-grid { column-count: 4; column-gap: 16px; }
+.g-item { break-inside: avoid; margin: 0 0 16px; }
+.g-open { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 6px; overflow: hidden; }
+.g-open img { width: 100%; height: auto; display: block; transition: transform .3s ease; }
+.g-open:hover img { transform: scale(1.03); }
+.g-open:focus-visible { outline: 3px solid var(--marigold); outline-offset: 3px; }
+.g-item figcaption { font-size: 13px; color: var(--muted); padding: 6px 2px 0; line-height: 1.35; }
+.lightbox { border: 0; padding: 0; background: transparent; max-width: min(1100px, 94vw); max-height: 92vh; }
+.lightbox::backdrop { background: rgba(8,16,48,0.86); }
+.lightbox img { max-width: 100%; max-height: 82vh; display: block; margin: 0 auto; border-radius: 6px; }
+.lightbox p { color: #fff; text-align: center; margin: 10px 0 0; font-size: 15px; }
+.lb-close { position: absolute; top: 6px; right: 6px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.92); color: var(--ink); font-size: 26px; line-height: 1; cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { .g-open img { transition: none; } }
+@media (max-width: 900px) { .g-grid { column-count: 3; } }
+@media (max-width: 560px) { .g-grid { column-count: 2; column-gap: 10px; } .g-item { margin-bottom: 10px; } }
 /* Author bio: lead and body share one measure, justified to clean edges */
 .author-grid .prose p { max-width: none; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .pub-grid { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; }
@@ -316,7 +334,7 @@ footer .wrap { padding: 28px 0; display: flex; justify-content: space-between; g
   <section class="block" id="author">
     <div class="wrap author-grid">
       <figure class="portrait">
-        <img src="wesley-richards.jpg" alt="Wesley Richards at the G20 India 2023" width="1200" height="900">
+        <img src="wesley-richards.jpg" alt="Wesley Richards at the Taj Mahal, Agra" width="1200" height="900">
       </figure>
       <div class="prose">
         <p class="kicker">About the author</p>
@@ -344,6 +362,40 @@ footer .wrap { padding: 28px 0; display: flex; justify-content: space-between; g
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="block gallery" id="in-india">
+    <div class="wrap">
+      <p class="kicker">On the ground</p>
+      <h2>Wesley in India</h2>
+      <p class="g-intro">Company visits, meetings and places from Wesley’s travels across India.</p>
+      <div class="g-grid">
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/g20.jpg" data-cap="G20 India 2023" aria-label="Enlarge photo: G20 India 2023"><img src="gallery/g20.jpg" alt="G20 India 2023" width="852" height="840" loading="lazy"></button><figcaption>G20 India 2023</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/titan.jpg" data-cap="Titan Company" aria-label="Enlarge photo: Titan Company"><img src="gallery/titan.jpg" alt="Titan Company" width="441" height="731" loading="lazy"></button><figcaption>Titan Company</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/hawa-mahal.jpg" data-cap="Hawa Mahal, Jaipur" aria-label="Enlarge photo: Hawa Mahal, Jaipur"><img src="gallery/hawa-mahal.jpg" alt="Hawa Mahal, Jaipur" width="1000" height="677" loading="lazy"></button><figcaption>Hawa Mahal, Jaipur</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/welspun-meeting.jpg" data-cap="Meeting at Welspun" aria-label="Enlarge photo: Meeting at Welspun"><img src="gallery/welspun-meeting.jpg" alt="Meeting at Welspun" width="615" height="630" loading="lazy"></button><figcaption>Meeting at Welspun</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/go-mmt.jpg" data-cap="go-mmt Group: MakeMyTrip, Goibibo, redBus" aria-label="Enlarge photo: go-mmt Group: MakeMyTrip, Goibibo, redBus"><img src="gallery/go-mmt.jpg" alt="go-mmt Group: MakeMyTrip, Goibibo, redBus" width="835" height="737" loading="lazy"></button><figcaption>go-mmt Group: MakeMyTrip, Goibibo, redBus</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/india-gate.jpg" data-cap="India Gate, New Delhi" aria-label="Enlarge photo: India Gate, New Delhi"><img src="gallery/india-gate.jpg" alt="India Gate, New Delhi" width="1000" height="750" loading="lazy"></button><figcaption>India Gate, New Delhi</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/bira91.jpg" data-cap="Bira 91" aria-label="Enlarge photo: Bira 91"><img src="gallery/bira91.jpg" alt="Bira 91" width="676" height="884" loading="lazy"></button><figcaption>Bira 91</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/port.jpg" data-cap="Port visit" aria-label="Enlarge photo: Port visit"><img src="gallery/port.jpg" alt="Port visit" width="1000" height="760" loading="lazy"></button><figcaption>Port visit</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/hdfc-amc.jpg" data-cap="HDFC Asset Management" aria-label="Enlarge photo: HDFC Asset Management"><img src="gallery/hdfc-amc.jpg" alt="HDFC Asset Management" width="524" height="518" loading="lazy"></button><figcaption>HDFC Asset Management</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/amer-fort.jpg" data-cap="Amer Fort, Jaipur" aria-label="Enlarge photo: Amer Fort, Jaipur"><img src="gallery/amer-fort.jpg" alt="Amer Fort, Jaipur" width="1000" height="676" loading="lazy"></button><figcaption>Amer Fort, Jaipur</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/welspun-flooring.jpg" data-cap="Welspun Flooring" aria-label="Enlarge photo: Welspun Flooring"><img src="gallery/welspun-flooring.jpg" alt="Welspun Flooring" width="772" height="755" loading="lazy"></button><figcaption>Welspun Flooring</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/niti-aayog.jpg" data-cap="NITI Aayog, New Delhi" aria-label="Enlarge photo: NITI Aayog, New Delhi"><img src="gallery/niti-aayog.jpg" alt="NITI Aayog, New Delhi" width="800" height="764" loading="lazy"></button><figcaption>NITI Aayog, New Delhi</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/gateway-of-india.jpg" data-cap="Gateway of India, Mumbai" aria-label="Enlarge photo: Gateway of India, Mumbai"><img src="gallery/gateway-of-india.jpg" alt="Gateway of India, Mumbai" width="1000" height="750" loading="lazy"></button><figcaption>Gateway of India, Mumbai</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/ramco.jpg" data-cap="Ramco Cements" aria-label="Enlarge photo: Ramco Cements"><img src="gallery/ramco.jpg" alt="Ramco Cements" width="647" height="602" loading="lazy"></button><figcaption>Ramco Cements</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/hero.jpg" data-cap="Hero MotoCorp" aria-label="Enlarge photo: Hero MotoCorp"><img src="gallery/hero.jpg" alt="Hero MotoCorp" width="750" height="1000" loading="lazy"></button><figcaption>Hero MotoCorp</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/marine-drive.jpg" data-cap="Marine Drive, Mumbai" aria-label="Enlarge photo: Marine Drive, Mumbai"><img src="gallery/marine-drive.jpg" alt="Marine Drive, Mumbai" width="1000" height="750" loading="lazy"></button><figcaption>Marine Drive, Mumbai</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/sabyasachi.jpg" data-cap="Sabyasachi, Mumbai" aria-label="Enlarge photo: Sabyasachi, Mumbai"><img src="gallery/sabyasachi.jpg" alt="Sabyasachi, Mumbai" width="856" height="837" loading="lazy"></button><figcaption>Sabyasachi, Mumbai</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/gyarah-murti.jpg" data-cap="Gyarah Murti, the Dandi March statue, New Delhi" aria-label="Enlarge photo: Gyarah Murti, the Dandi March statue, New Delhi"><img src="gallery/gyarah-murti.jpg" alt="Gyarah Murti, the Dandi March statue, New Delhi" width="1000" height="750" loading="lazy"></button><figcaption>Gyarah Murti, the Dandi March statue, New Delhi</figcaption></figure>
+        <figure class="g-item"><button type="button" class="g-open" data-src="gallery/sbi-yono.jpg" data-cap="SBI YONO" aria-label="Enlarge photo: SBI YONO"><img src="gallery/sbi-yono.jpg" alt="SBI YONO" width="269" height="202" loading="lazy"></button><figcaption>SBI YONO</figcaption></figure>
+      </div>
+    </div>
+    <dialog class="lightbox" id="lightbox" aria-label="Photo">
+      <button type="button" class="lb-close" aria-label="Close photo">×</button>
+      <img id="lbImg" alt="">
+      <p id="lbCap"></p>
+    </dialog>
   </section>
 
   <section class="block publisher" id="publisher">
@@ -393,6 +445,13 @@ drawWheel(hw, '#0b1f6b', 640, 640, 600);
 const cw = document.getElementById('coverWheel');
 drawWheel(cw, '#ff9933', 200, 200, 186);
 document.querySelectorAll('.qwheel').forEach(c => drawWheel(c, '#ffffff', 520, 520, 500));
+// Gallery lightbox
+(function(){
+  const dlg=document.getElementById('lightbox'); if(!dlg||!dlg.showModal) return;
+  const img=document.getElementById('lbImg'), cap=document.getElementById('lbCap');
+  document.querySelectorAll('.g-open').forEach(b=>b.addEventListener('click',()=>{img.src=b.dataset.src;img.alt=b.dataset.cap;cap.textContent=b.dataset.cap;dlg.showModal();}));
+  dlg.addEventListener('click',e=>{ if(e.target===dlg||e.target.classList.contains('lb-close')) dlg.close(); });
+})();
 </script>
 </body>
 </html>

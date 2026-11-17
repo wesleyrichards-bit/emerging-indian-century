@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Emerging Indian Century</title>
+<meta name="description" content="The Emerging Indian Century by Wesley Richards. How India is becoming one of the world's great economic powers, told through its history, its culture and the companies building its future. Forthcoming from Penguin Random House India.">
+<meta property="og:type" content="book">
+<meta property="og:title" content="The Emerging Indian Century by Wesley Richards">
+<meta property="og:description" content="How India is becoming one of the world's great economic powers. Forthcoming from Penguin Random House India.">
+<meta name="theme-color" content="#0b1f6b">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout idea: the tricolour as structure (saffron, white, green stripes framing the page), Ashoka Chakra navy for text and the 24-spoke wheel motif, warm khadi-white pages. */
+  --ink: #0b1f6b;        /* Ashoka Chakra navy */
+  --ink-2: #0b1f6b;
+  --cotton: #fffaf2;     /* warm khadi white */
+  --paper: #ffffff;
+  --marigold: #e8780c;   /* saffron, deepened for legible text */
+  --saffron: #ff9933;
+  --green: #138808;
+  --text: #24283f;
+  --muted: #5b5f78;
+  --rule: #ecdfcb;
+  --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-body: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--cotton);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+a:focus-visible { outline: 3px solid var(--marigold); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; text-wrap: balance; line-height: 1.1; margin: 0; }
+.wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+
+/* Header */
+.tricolour { height: 6px; background: linear-gradient(90deg, var(--saffron) 0 33.33%, #ffffff 33.33% 66.66%, var(--green) 66.66%); }
+.site-head {
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+}
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; flex-wrap: wrap; }
+.brand { font-family: var(--font-display); font-size: 20px; text-decoration: none; }
+.nav { display: flex; gap: 22px; flex-wrap: wrap; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; }
+.nav a { text-decoration: none; color: var(--muted); }
+.nav a:hover { color: var(--green); }
+
+/* Hero */
+.hero { background: radial-gradient(120% 90% at 0% 0%, #ffe9cc 0%, var(--cotton) 55%, #eef7ea 100%); color: var(--ink); position: relative; overflow: hidden; }
+#heroWheel { position: absolute; right: -160px; top: 50%; transform: translateY(-50%); width: 640px; height: 640px; opacity: 0.13; pointer-events: none; }
+.hero .wrap { position: relative; display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 56px; align-items: center; padding: 72px 0 80px; }
+.status { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--marigold); }
+.status::before { content: ""; width: 30px; height: 4px; background: linear-gradient(90deg, var(--saffron) 0 33%, #fff 33% 66%, var(--green) 66%); box-shadow: 0 0 0 1px var(--rule); }
+.hero h1 { font-size: clamp(44px, 7vw, 84px); margin: 18px 0 18px; }
+.hero h1 em { color: var(--marigold); font-style: italic; }
+.hero .sub { font-size: 21px; color: var(--text); max-width: 34em; margin: 0 0 28px; }
+.byline { font-size: 17px; color: var(--muted); }
+.byline strong { color: var(--ink); font-weight: 700; }
+
+/* Cover */
+.cover {
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  max-width: 320px;
+  justify-self: end;
+  display: grid; grid-template-rows: 1fr 1fr 1fr;
+  box-shadow: 0 24px 50px rgba(11,31,107,0.28);
+  border-radius: 3px 6px 6px 3px;
+  overflow: hidden;
+  position: relative;
+}
+.cover::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: rgba(0,0,0,0.10); }
+.cover .c-top { background: var(--saffron); padding: 20px 22px; display: flex; align-items: center; }
+.cover .c-mid { background: #fff; display: grid; place-items: center; }
+.cover .c-bot { background: var(--green); padding: 20px 22px; display: flex; align-items: flex-end; }
+.cover .c-title { font-family: var(--font-display); font-size: 29px; line-height: 1.05; color: var(--ink); }
+.cover .c-author { font-family: var(--font-display); font-size: 22px; color: #fff; }
+.cover .c-wheel { width: 92px; height: 92px; }
+
+/* Standalone quote bands */
+.quote-band { background: var(--ink); color: #fff; border-top: 6px solid var(--saffron); border-bottom: 6px solid var(--green); position: relative; overflow: hidden; }
+.quote-band canvas { position: absolute; left: 50%; top: 50%; width: 520px; height: 520px; transform: translate(-50%, -50%); opacity: 0.08; pointer-events: none; }
+.quote-band figure { position: relative; margin: 0 auto; padding: 64px 0; max-width: 860px; text-align: center; }
+.quote-band blockquote { margin: 0 0 22px; font-family: var(--font-display); font-size: clamp(28px, 3.8vw, 42px); line-height: 1.22; text-wrap: balance; }
+.quote-band blockquote::before { content: "“"; color: var(--saffron); }
+.quote-band blockquote::after { content: "”"; color: var(--saffron); }
+.quote-band figcaption { font-size: 15px; color: rgba(255,255,255,0.72); }
+.quote-band figcaption b { color: #fff; letter-spacing: 0.04em; margin-right: 8px; }
+.quote-band.light { background: var(--paper); color: var(--ink); }
+.quote-band.light figcaption { color: var(--muted); }
+.quote-band.light figcaption b { color: var(--ink); }
+
+/* Sections */
+section.block { padding: 88px 0; }
+section.block + section.block { border-top: 1px solid var(--rule); }
+.kicker { font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green); margin: 0 0 14px; }
+.block h2 { font-size: clamp(34px, 4.5vw, 52px); color: var(--ink); margin-bottom: 28px; }
+.prose p { max-width: 64ch; margin: 0 0 1.1em; }
+.prose p.lead { font-size: 22px; line-height: 1.5; color: var(--ink); }
+
+.about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: start; }
+
+/* Praise */
+.praise-side { background: var(--paper); border-radius: 12px; padding: 30px 30px 28px; box-shadow: 0 1px 0 var(--rule), 0 18px 40px rgba(11,31,107,0.08); border-top: 6px solid transparent; border-image: linear-gradient(90deg, var(--saffron) 0 33.33%, var(--rule) 33.33% 66.66%, var(--green) 66.66%) 1; }
+.praise-side figure { margin: 0; }
+.praise-side blockquote { margin: 0 0 22px; font-family: var(--font-display); font-size: 25px; line-height: 1.3; color: var(--ink); }
+.praise-side blockquote::before { content: "“"; color: var(--marigold); }
+.praise-side blockquote::after { content: "”"; color: var(--marigold); }
+.endorser { font-size: 17px; }
+.endorser b { display: block; color: var(--ink); font-size: 19px; }
+.endorser ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 4px; color: var(--muted); font-size: 16px; }
+.endorser li i { color: var(--text); }
+
+/* Chapters */
+.chapters { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 48px; }
+.chapters li { display: grid; grid-template-columns: 3.2rem 1fr; gap: 14px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+.chapters .num { font-family: var(--font-display); font-size: 30px; line-height: 1; color: var(--marigold); font-variant-numeric: tabular-nums; }
+.chapters h3 { font-size: 23px; color: var(--ink); margin-bottom: 4px; }
+.chapters .cos { font-size: 14px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+.chapters p { margin: 0; font-size: 16px; color: var(--text); }
+.chapters li.bookend .num { font-size: 18px; padding-top: 6px; color: var(--muted); }
+.chapters li.bookend { grid-column: span 1; }
+
+/* Author */
+.author-grid { display: grid; grid-template-columns: 0.8fr 1.4fr; gap: 64px; align-items: start; }
+.portrait { margin: 0; position: relative; border-radius: 6px; overflow: hidden; box-shadow: 0 20px 44px rgba(11,31,107,0.18); }
+.portrait img { width: 100%; height: auto; }
+.portrait::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: linear-gradient(90deg, var(--saffron) 0 33.33%, #fff 33.33% 66.66%, var(--green) 66.66%); }
+.creds { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; padding: 0; list-style: none; }
+.creds li { font-size: 14px; font-weight: 600; padding: 6px 12px; border: 1px solid var(--rule); background: var(--paper); border-radius: 999px; color: var(--ink); }
+.events { margin-top: 28px; }
+.events h3 { font-family: var(--font-body); font-weight: 700; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+.events ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 16px; }
+.events li::before { content: "— "; color: var(--green); }
+
+/* Publisher */
+.publisher { background: var(--paper); }
+.pub-grid { display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center; }
+.pub-grid img { width: 180px; }
+.pub-grid h2 { margin-bottom: 14px; }
+
+footer { background: var(--ink); color: rgba(255,255,255,0.72); font-size: 14px; }
+footer .wrap { padding: 28px 0; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .hero .wrap, .about-grid, .author-grid { grid-template-columns: 1fr; gap: 40px; }
+  .cover { justify-self: start; max-width: 260px; }
+  .chapters { grid-template-columns: 1fr; }
+  .portrait { max-width: 320px; }
+}
+@media (max-width: 560px) {
+  body { font-size: 17px; }
+  .wrap { width: calc(100% - 32px); }
+  section.block { padding: 64px 0; }
+  .pub-grid { grid-template-columns: 1fr; gap: 28px; }
+  .nav { gap: 14px; }
+}
+</style>
+</head>
+<body>
+
+<div class="tricolour" aria-hidden="true"></div>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">The Emerging Indian Century</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#book">The Book</a>
+      <a href="#chapters">Chapters</a>
+            <a href="#author">The Author</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <canvas id="heroWheel" width="1280" height="1280" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div>
+        <span class="status">Forthcoming · Penguin Random House India</span>
+        <h1>The Emerging <em>Indian</em> Century</h1>
+        <p class="sub">How India is becoming one of the world’s great economic powers, told through its history, its culture and the companies building its future.</p>
+        <p class="byline">By <strong>Wesley Richards</strong></p>
+      </div>
+      <div class="cover" role="img" aria-label="Book cover: The Emerging Indian Century by Wesley Richards">
+        <div class="c-top"><div class="c-title">The Emerging Indian Century</div></div>
+        <div class="c-mid"><canvas class="c-wheel" id="coverWheel" width="112" height="112" aria-hidden="true"></canvas></div>
+        <div class="c-bot"><div class="c-author">Wesley Richards</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band" aria-label="Quotation">
+    <canvas class="qwheel" width="1040" height="1040" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <figure>
+        <blockquote>I predict that the 21st Century is going to be the Indian Century.</blockquote>
+        <figcaption><b>Jeff Bezos</b>New Delhi, 15 January 2020</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block" id="book">
+    <div class="wrap about-grid">
+      <div class="prose">
+        <p class="kicker">About the book</p>
+        <h2>An Indian tailwind</h2>
+        <p class="lead">Before the British arrived, the Indian subcontinent produced almost a quarter of the world’s economic output. By Independence, its share had fallen below four percent. Today India is the world’s most populous nation and one of its fastest-growing major economies.</p>
+        <p>The Emerging Indian Century explains how India is set to become one of the world’s leading economic powers in the twenty-first century. It traces the arc from Nehru’s tryst with destiny, through the Licence Raj and the reforms of 1991, to the digital public infrastructure, GST and new institutions of the Modi era.</p>
+        <p>Each chapter pairs a thread of Indian history and culture with the story of a company shaping the country’s future. Wimbledon’s towels lead back to Gandhi’s spinning wheel and on to Welspun. Temple gold leads to Titan and Kalyan. A cola war leads to Varun Beverages. Drawing on first-hand conversations with founders and leaders, Wesley Richards offers an outsider’s view of an economy entering a multi-decade period of compounding growth.</p>
+      </div>
+      <aside class="praise-side" id="praise" aria-label="Praise">
+        <p class="kicker">Praise</p>
+        <figure>
+          <blockquote>The idea is brilliant. Reads very well. Short and crisp. Wesley has adopted a novel approach in showcasing some of the Indian companies and their success stories to capture the new emerging India.</blockquote>
+          <figcaption class="endorser">
+            <b>Ashok Bhattacharya</b>
+            Author of
+            <ul>
+              <li><i>India’s Finance Ministers: From Independence to Emergency (1947–1977)</i></li>
+              <li><i>India’s Finance Ministers: Stumbling into Reforms (1978–1998)</i></li>
+              <li><i>India’s Finance Ministers: Different Strokes (1998–2014)</i></li>
+            </ul>
+          </figcaption>
+        </figure>
+      </aside>
+    </div>
+  </section>
+
+  <section class="quote-band" aria-label="Quotation">
+    <canvas class="qwheel" width="1040" height="1040" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <figure>
+        <blockquote>A moment comes, which comes but rarely in history, when we step out from the old to the new, when an age ends, and when the soul of a nation, long suppressed, finds utterance.</blockquote>
+        <figcaption><b>Jawaharlal Nehru</b>Tryst with Destiny, 14 August 1947</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block" id="chapters">
+    <div class="wrap">
+      <p class="kicker">Contents</p>
+      <h2>Fifteen chapters, fifteen stories</h2>
+      <ol class="chapters">
+        <li class="bookend"><span class="num">Pref.</span><div><h3>Preface</h3><p>A personal connection to India, from Queen Victoria’s statue on Windsor’s High Street to the Gateway of India.</p></div></li>
+        <li><span class="num">01</span><div><h3>An Indian Tailwind</h3><div class="cos">Introduction</div><p>From Nehru’s tryst with destiny to the 1991 reforms and the forecasts of a $50 trillion economy by 2075.</p></div></li>
+        <li><span class="num">02</span><div><h3>Gold</h3><div class="cos">Temple · Kalyan · Titan</div><p>The treasures of a Kerala temple, gold in the 1991 crisis, and the rise of India’s formal jewellers.</p></div></li>
+        <li><span class="num">03</span><div><h3>Spirits</h3><div class="cos">Empire · Radico Khaitan · Allied Blenders · Tilaknagar</div><p>From the Koh-i-Noor to Rampur single malt, and the premiumisation of Indian brands.</p></div></li>
+        <li><span class="num">04</span><div><h3>Cotton</h3><div class="cos">Wimbledon · Welspun</div><p>Wimbledon’s towels, Gandhi’s spinning wheel, and an Indian textile giant that brought the industry full circle.</p></div></li>
+        <li><span class="num">05</span><div><h3>Partition</h3><div class="cos">Mrs Bectors</div><p>Rajni Bector fled Lahore aged eight and went on to build a homegrown food brand.</p></div></li>
+        <li><span class="num">06</span><div><h3>Reforms</h3><div class="cos">PepsiCo · Varun Beverages</div><p>The Licence Raj, the cola wars and the rise of the Indian consumer after 1991.</p></div></li>
+        <li><span class="num">07</span><div><h3>Infrastructure</h3><div class="cos">Kashmir · Afcons · Welspun · APL Apollo</div><p>Building the roads, bridges and tunnels of the twenty-first century.</p></div></li>
+        <li><span class="num">08</span><div><h3>Defence</h3><div class="cos">Galwan · Bharat Forge</div><p>The Galwan Valley clash and India’s push for self-reliance in defence.</p></div></li>
+        <li><span class="num">09</span><div><h3>Energy</h3><div class="cos">Green · Electricity · Adani</div><p>Electrifying every village and the race to lead in green energy.</p></div></li>
+        <li><span class="num">10</span><div><h3>Wealth</h3><div class="cos">360 ONE · Brokers</div><p>The formalisation of savings and the new Indian investor.</p></div></li>
+        <li><span class="num">11</span><div><h3>Bollywood</h3><div class="cos">Beauty · Nykaa · Honasa</div><p>Stars, social media and the business of an aspirational India.</p></div></li>
+        <li><span class="num">12</span><div><h3>Manufacturing</h3><div class="cos">Apple store · Dixon · Hindustan Foods</div><p>Make in India and the shift of global supply chains.</p></div></li>
+        <li><span class="num">13</span><div><h3>Platform</h3><div class="cos">Meesho · Eternal · CarTrade · Delhivery</div><p>Technology platforms connecting millions of small businesses and consumers.</p></div></li>
+        <li><span class="num">14</span><div><h3>Cricket</h3><div class="cos">IPL · The Ambanis · Private equity</div><p>From sepoy matches in the 1830s to a global sports franchise powered by cheap mobile data.</p></div></li>
+        <li><span class="num">15</span><div><h3>Luxury</h3><div class="cos">Ambani wedding · Inequality · Sabyasachi · Lodha</div><p>Conspicuous wealth and the questions of inequality it raises.</p></div></li>
+        <li class="bookend"><span class="num">Epil.</span><div><h3>Epilogue</h3><p>What the century ahead might hold.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="author">
+    <div class="wrap author-grid">
+      <figure class="portrait">
+        <img src="wesley-richards.jpg" alt="Wesley Richards" width="640" height="800">
+      </figure>
+      <div class="prose">
+        <p class="kicker">About the author</p>
+        <h2>Wesley Richards</h2>
+        <ul class="creds">
+          <li>CFA Charterholder</li>
+          <li>Asian fund manager</li>
+          <li>Barrister, Middle Temple</li>
+          <li>LSE</li>
+        </ul>
+        <p class="lead">Wesley Richards is an Asian fund manager with a focus on India. He has travelled extensively across the country and has met many of its leading founders, promoters and CEOs.</p>
+        <p>Wesley has worked for a UK single family office for ten years, the last five as its in-house Asian fund manager. In 2009 he founded Frontier Asset, providing investment consultancy and research services.</p>
+        <p>Before moving into wealth management, he worked as a pastor for a non-denominational church. A former international rower, he served as an elected local councillor for the Royal Borough of Windsor &amp; Maidenhead from 2015 to 2019 and is a parent-founder of an independent school in Windsor.</p>
+        <p>He holds a degree in Economics from the University of London and a Masters in Environment and Development from the London School of Economics. He was called to the Bar by the Middle Temple in 2005 and is a CFA Charterholder. He is married with four sons.</p>
+        <div class="events">
+          <h3>Speaking</h3>
+          <ul>
+            <li>VALUEx Klosters, 2023 and 2024</li>
+            <li>VALUEx Middle East, 2023</li>
+            <li>Cayman Alternative Investment Summit, 2017</li>
+            <li>The Investment Institute, 2016</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block publisher" id="publisher">
+    <div class="wrap pub-grid">
+      <img src="prhi-logo.jpg" alt="Penguin Random House India logo" width="180" height="231">
+      <div class="prose">
+        <p class="kicker">Publisher</p>
+        <h2>Coming soon from Penguin Random House India</h2>
+        <p>The Emerging Indian Century will be published by Penguin Random House India. Publication date and pre-order details will be announced here.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="tricolour" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <span>The Emerging Indian Century · Wesley Richards</span>
+    <span>© 2026 Wesley Richards. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+// The Ashoka Chakra: 24 spokes, the wheel at the centre of India's flag (it replaced Gandhi's charkha in 1947).
+function drawWheel(canvas, color, cx, cy, r) {
+  try {
+    const ctx = canvas.getContext('2d');
+    const w = canvas.width;
+    const lw = Math.max(1.5, r * 0.035);
+    ctx.strokeStyle = color; ctx.fillStyle = color; ctx.lineWidth = lw;
+    ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx, cy, r * 0.86, 0, Math.PI * 2); ctx.lineWidth = lw * 0.5; ctx.stroke();
+    ctx.lineWidth = lw * 0.7;
+    for (let i = 0; i < 24; i++) {
+      const a = (i / 24) * Math.PI * 2;
+      ctx.beginPath();
+      ctx.moveTo(cx + Math.cos(a) * r * 0.14, cy + Math.sin(a) * r * 0.14);
+      ctx.lineTo(cx + Math.cos(a) * r * 0.86, cy + Math.sin(a) * r * 0.86);
+      ctx.stroke();
+      ctx.beginPath(); ctx.arc(cx + Math.cos(a + Math.PI / 24) * r * 0.93, cy + Math.sin(a + Math.PI / 24) * r * 0.93, r * 0.018, 0, Math.PI * 2); ctx.fill();
+    }
+    ctx.beginPath(); ctx.arc(cx, cy, r * 0.14, 0, Math.PI * 2); ctx.lineWidth = lw; ctx.stroke();
+  } catch (e) {}
+}
+const hw = document.getElementById('heroWheel');
+drawWheel(hw, '#0b1f6b', 640, 640, 600);
+const cw = document.getElementById('coverWheel');
+drawWheel(cw, '#0b1f6b', 56, 56, 50);
+document.querySelectorAll('.qwheel').forEach(c => drawWheel(c, '#ffffff', 520, 520, 500));
+</script>
+</body>
+</html>

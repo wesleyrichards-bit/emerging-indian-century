@@ -164,9 +164,12 @@ section.block + section.block { border-top: 1px solid var(--rule); }
 
 /* Publisher */
 .publisher { background: var(--paper); }
-.pub-grid { display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center; }
-.pub-grid img { width: 180px; }
+/* Author bio: lead and body share one measure, justified to clean edges */
+.author-grid .prose p { max-width: none; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.pub-grid { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; }
+.pub-grid img { width: 160px; }
 .pub-grid h2 { margin-bottom: 14px; }
+.pub-grid .prose p { margin-inline: auto; }
 
 footer { background: var(--ink); color: rgba(255,255,255,0.72); font-size: 14px; }
 footer .wrap { padding: 28px 0; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
@@ -181,7 +184,6 @@ footer .wrap { padding: 28px 0; display: flex; justify-content: space-between; g
   body { font-size: 17px; }
   .wrap { width: calc(100% - 32px); }
   section.block { padding: 64px 0; }
-  .pub-grid { grid-template-columns: 1fr; gap: 28px; }
   .nav { gap: 14px; }
 }
 </style>
@@ -315,14 +317,14 @@ footer .wrap { padding: 28px 0; display: flex; justify-content: space-between; g
         <h2>Wesley Richards</h2>
         <ul class="creds">
           <li>CFA Charterholder</li>
-          <li>Asian fund manager</li>
+          <li>Emerging markets investor</li>
           <li>Barrister, Middle Temple</li>
           <li>LSE</li>
         </ul>
-        <p class="lead">Wesley Richards is an Asian fund manager with a focus on India. He has travelled extensively across the country and has met many of its leading founders, promoters and CEOs.</p>
-        <p>Wesley has worked for a UK single family office for ten years, the last five as its in-house Asian fund manager. In 2009 he founded Frontier Asset, providing investment consultancy and research services.</p>
-        <p>Before moving into wealth management, he worked as a pastor for a non-denominational church. A former international rower, he served as an elected local councillor for the Royal Borough of Windsor &amp; Maidenhead from 2015 to 2019 and is a parent-founder of an independent school in Windsor.</p>
-        <p>He holds a degree in Economics from the University of London and a Masters in Environment and Development from the London School of Economics. He was called to the Bar by the Middle Temple in 2005 and is a CFA Charterholder. He is married with four sons.</p>
+        <p class="lead">Wesley has nearly two decades of experience working across frontier and emerging markets with a focus on India. He has travelled extensively across the country and has met many of its leading founders, promoters and CEOs.</p>
+        <p>He has spent over 12 years at a UK single family office, managing an in-house Asian equity fund. In 2008 he founded Seven Eight Asset, providing investment consultancy and research services. Before moving into the wealth management industry, he worked as a Pastor for a non-denominational church, where he spent time investing in people and helping them reach their potential.</p>
+        <p>A former international rower, he served as an elected local councillor for the Royal Borough of Windsor &amp; Maidenhead from 2015 to 2019 and is a parent-founder of an independent school in Windsor.</p>
+        <p>He holds a degree in Economics from the University of London and a Masters in Environment and Development from the London School of Economics. He was called to the Bar by the Middle Temple in 2005 and is a CFA Charterholder. Wesley is married with four sons.</p>
         <div class="events">
           <h3>Speaking</h3>
           <ul>

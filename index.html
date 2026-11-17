@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Emerging Indian Century</title>
-<meta name="description" content="The Emerging Indian Century by Wesley Richards. How India is becoming one of the world's great economic powers, told through its history, its culture and the companies building its future. Forthcoming from Penguin Random House India.">
+<meta name="description" content="The Emerging Indian Century by Wesley Richards. How India is becoming one of the world's great economic powers, told through its history, its culture and the companies building its future. Forthcoming from Penguin Random House India, August 2027.">
 <meta property="og:type" content="book">
 <meta property="og:title" content="The Emerging Indian Century by Wesley Richards">
-<meta property="og:description" content="How India is becoming one of the world's great economic powers. Forthcoming from Penguin Random House India.">
+<meta property="og:description" content="How India is becoming one of the world's great economic powers. Forthcoming from Penguin Random House India, August 2027.">
 <meta name="theme-color" content="#0b1f6b">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +64,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; text-wrap: bala
 .hero { background: radial-gradient(120% 90% at 0% 0%, #ffe9cc 0%, var(--cotton) 55%, #eef7ea 100%); color: var(--ink); position: relative; overflow: hidden; }
 #heroWheel { position: absolute; right: -160px; top: 50%; transform: translateY(-50%); width: 640px; height: 640px; opacity: 0.13; pointer-events: none; }
 .hero .wrap { position: relative; display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 56px; align-items: center; padding: 72px 0 80px; }
-.status { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--marigold); }
+.status { display: inline-flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--marigold); flex-wrap: wrap; }
 .status::before { content: ""; width: 30px; height: 4px; background: linear-gradient(90deg, var(--saffron) 0 33%, #fff 33% 66%, var(--green) 66%); box-shadow: 0 0 0 1px var(--rule); }
 .hero h1 { font-size: clamp(44px, 7vw, 84px); margin: 18px 0 18px; }
 .hero h1 em { color: var(--marigold); font-style: italic; }
@@ -88,13 +88,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; text-wrap: bala
   color: #fff8ec;
   display: flex; flex-direction: column;
   padding: 30px 28px 0;
+  gap: 0;
 }
 .cover::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 7px; background: linear-gradient(90deg, rgba(0,0,0,0.35), rgba(255,255,255,0.08)); z-index: 3; }
 .cover .c-author { position: relative; z-index: 2; font-size: 12px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; color: var(--saffron); }
-.cover .c-title { position: relative; z-index: 2; margin-top: 18px; font-family: var(--font-display); font-size: clamp(38px, 4.2vw, 50px); line-height: 0.98; letter-spacing: -0.01em; }
+.cover .c-title { position: relative; z-index: 2; margin-top: 16px; font-family: var(--font-display); font-size: clamp(32px, 3.3vw, 42px); line-height: 1.02; letter-spacing: -0.005em; }
 .cover .c-title em { color: var(--saffron); }
-.cover .c-tag { position: relative; z-index: 2; margin-top: 16px; font-size: 13px; line-height: 1.4; color: rgba(255,248,236,0.78); max-width: 15em; }
-.cover .c-sun { position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%); width: 125%; aspect-ratio: 2 / 1; z-index: 1; }
+.cover .c-tag { position: relative; z-index: 2; margin-top: 14px; font-size: 13px; line-height: 1.4; color: rgba(255,248,236,0.78); max-width: 15em; }
+.cover .c-sun { display: block; margin: auto -28px 10px; width: calc(100% + 56px); max-width: none; aspect-ratio: 2 / 1; height: auto; flex: 0 0 auto; }
 .cover .c-strip { position: absolute; left: 0; right: 0; bottom: 0; height: 10px; z-index: 2; background: linear-gradient(90deg, var(--saffron) 0 33.33%, #ffffff 33.33% 66.66%, var(--green) 66.66%); }
 
 /* Standalone quote bands */
@@ -114,7 +115,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; text-wrap: bala
 /* Sections */
 section.block { padding: 88px 0; }
 section.block + section.block { border-top: 1px solid var(--rule); }
-.kicker { font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green); margin: 0 0 14px; }
+.kicker { font-size: 16px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--green); margin: 0 0 14px; }
 .block h2 { font-size: clamp(34px, 4.5vw, 52px); color: var(--ink); margin-bottom: 28px; }
 .prose p { max-width: 64ch; margin: 0 0 1.1em; }
 .prose p.lead { font-size: 22px; line-height: 1.5; color: var(--ink); }
@@ -195,9 +196,9 @@ footer .wrap { padding: 28px 0; display: flex; justify-content: space-between; g
   <div class="wrap">
     <a class="brand" href="#top">The Emerging Indian Century</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#book">The Book</a>
-      <a href="#chapters">Chapters</a>
-            <a href="#author">The Author</a>
+      <a href="#book">About the Book</a>
+      <a href="#chapters">Contents</a>
+      <a href="#author">About the Author</a>
     </nav>
   </div>
 </header>
@@ -207,7 +208,7 @@ footer .wrap { padding: 28px 0; display: flex; justify-content: space-between; g
     <canvas id="heroWheel" width="1280" height="1280" aria-hidden="true"></canvas>
     <div class="wrap">
       <div>
-        <span class="status">Forthcoming · Penguin Random House India</span>
+        <span class="status">Forthcoming August 2027 · Penguin Random House India</span>
         <h1>The Emerging <em>Indian</em> Century</h1>
         <p class="sub">How India is becoming one of the world’s great economic powers, told through its history, its culture and the companies building its future.</p>
         <p class="byline">By <strong>Wesley Richards</strong></p>
@@ -332,6 +333,8 @@ footer .wrap { padding: 28px 0; display: flex; justify-content: space-between; g
             <li>VALUEx Middle East</li>
             <li>FatAlpha Value, 2025–2026</li>
             <li>DDQ Invest Global Investment Solutions Conference, Edinburgh</li>
+            <li>Cayman Alternative Investment Summit, 2017</li>
+            <li>The Investment Institute, 2016</li>
           </ul>
         </div>
       </div>
@@ -344,7 +347,7 @@ footer .wrap { padding: 28px 0; display: flex; justify-content: space-between; g
       <div class="prose">
         <p class="kicker">Publisher</p>
         <h2>Coming soon from Penguin Random House India</h2>
-        <p>The Emerging Indian Century will be published by Penguin Random House India. Publication date and pre-order details will be announced here.</p>
+        <p>The Emerging Indian Century will be published by Penguin Random House India in August 2027. Pre-order details will be announced here.</p>
       </div>
     </div>
   </section>
